@@ -1,15 +1,9 @@
+/* eslint-disable no-console */
 const somaHorasExtras = (salario, valorHorasExtras) => salario + valorHorasExtras;
 
 const calculaDesconto = (salario, descontos) => salario - descontos;
 
-const teste = (titulo, esperado, retornado) => {
-  if (esperado === retornado) {
-    console.log(`${titulo} passou`);
-  } else {
-    console.error(`${titulo} não passou`);
-  }
+export {
+  somaHorasExtras,
+  calculaDesconto,
 };
-
-teste('somaHorasExtras', 2500, somaHorasExtras(2000, 500));
-
-teste('calculaDesconto', 2200, calculaDesconto(2500, 500));
