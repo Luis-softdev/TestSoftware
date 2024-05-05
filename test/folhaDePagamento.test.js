@@ -1,15 +1,19 @@
+/* eslint-disable import/extensions */
+/* eslint-disable linebreak-style */
 import { somaHorasExtras, calculaDesconto } from '../index.js';
 
-test('Deve retornar a soma das horas extras', () => {
-  const esperado = 2500;
-  const retornado = somaHorasExtras(2000, 500);
+describe('Testes dos cálculos de folha', () => {
+  it('Deve retornar a soma das horas extras', () => {
+    const esperado = 2500;
+    const retornado = somaHorasExtras(2000, 500);
 
-  expect(retornado).toBe(esperado);
-});
+    expect(retornado).toBe(esperado);
+  });
 
-test('Deve descontar o salário', () => {
-  const esperado = 2300;
-  const retornado = calculaDesconto(2500, 200);
+  it('Deve descontar o salário', () => {
+    const esperado = 2300;
+    const retornado = calculaDesconto(2500, 200);
 
-  expect(retornado).toBe(esperado);
+    expect(retornado).toBe(esperado);
+  });
 });
